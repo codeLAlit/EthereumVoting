@@ -3,6 +3,10 @@
 ## Developed by Team: DeLaRo 
 Devak Sinha, Rohan Jasani & Lalit Saini
 
+## ABSTRACT:
+
+
+## Functions:
 ## EventMaker 
 Stroes the address of the person who hosted the voting
 
