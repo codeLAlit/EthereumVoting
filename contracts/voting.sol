@@ -69,14 +69,15 @@ contract Vote {
         }
     }
     
-    // function endEvent() public returns (string){
-    //     if(msg.sender==EventMaker){
-    //         int max = proposals[0].total;
-    //         for(uint i=1; i<proposals.length;i++){
-    //             if(proposals[i].total > max.total || ((proposals[i].total = max.total) && (proposals[i].voteNeutral > max.voteNeutral))) max = proposals[i];
-    //         }    
-    //     }
-    //     else return("Invalid");
-    // }
+    function endEvent() public view returns (string memory){
+        if(msg.sender==EventMaker){
+            Proposal memory max = proposals[0];
+            for(uint i=1; i<proposals.length;i++){
+                if((proposals[i].total > max.total) || ((proposals[i].total == max.total) && (proposals[i].voteNeutral > max.voteNeutral))) max = proposals[i];
+            } 
+            return (max.Candidate);
+        }
+        else return("Invalid");
+    }
 
 }
