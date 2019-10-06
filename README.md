@@ -22,35 +22,34 @@ In most places in the World, especially in Developing Countries, the voting mech
 Stroes the address of the person who hosted the voting
 
 ## Struct Proposal
-It has Candidate name, positive and negative votes he/she get. There is a section for neutral also which means no of voter who are neutral 
-to a candidate.
+It has the Candidate name, positive and negative votes s/he got. There is also a section for neutral which means number of voters who are neutral to a candidate.
+In case of draw, the candidate with maximum neutral votes will win.
 
 ##  Struct Voter
 It stores whether you voted or not and value of you vote {1=positive, 2=negative, 3=neutral}.
 
 ## Event : createCandidate
-It send address of a person who created a candidate to metmask where we can confirm it.
+It sends address of the person who created a candidate to MetaMask where we can confirm it.
 
 ## Event : createdVoteEvent
-It gives information of vote to the voter on his metamask which can be declined if wrongly voted 
-or can be confiremed.
-It provides double checking on voter side.
+It gives information of his/her vote to the voter on his/her MetaMask which can be declined if wrongly voted or can be confirmed. Once confirmed by voter, vote cannot be changed. It provides double checking on voter’s side.
 
 ## getNumCandidate
 Returns number of candidates.
 
 ## addCandidate
-It will add candidate to voting system if added by a someone other than creator it won't be added.
+It will add the candidate to the voting system. If added by someone other than the Creator, he/she will not be added.
 
 ## getCandidate
-Returns information of candidate, positive, negative and neutral votes, total votes and voter addresses.
+Returns information of candidate i.e. positive, negative and neutral votes, total votes and voter addresses.
 
 ## vote
 It is to cast your vote to a candidate.
 
 ## endVote
-It is to end the voting process by the voting system creater.
+Its function is to end the voting process by the voting system creator.
 
-To ensure trust and immutability we are always allowing officials to compare hash of users and authorized persons.
+
+To ensure trust and immutability, we are always allowing anyone even voters to compare hash of users and authorized persons.
 
 
